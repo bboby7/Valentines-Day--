@@ -56,6 +56,23 @@ function displayCat() {
     };
 }
 
+// Function to display the Eyes.gif initially
+function displayEyes() {
+    // Get the container where the image will be displayed
+    var imageContainer = document.getElementById('image-container');
+    // Create a new Image element for the cat
+    var EyesImage = new Image();
+    // Set the source (file path) for the cat image
+    EyesImage.src = 'Eyes.gif'; // Assuming the Eyes image is named "Eyes.gif"
+    // Set alternative text for the image (for accessibility)
+    EyesImage.alt = 'Eyes';
+    // When the Eyes image is fully loaded, add it to the image container
+    EyesImage.onload = function() {
+        imageContainer.appendChild(EyesImage);
+    };
+}
+
+
 // Function to display the cat-heart.gif
 function displayCatHeart() {
     // Clear existing content in the image container
@@ -78,3 +95,4 @@ function displayCatHeart() {
 
 // Display the cat.gif initially
 displayCat();
+displayEyes();
